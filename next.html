@@ -11,77 +11,27 @@
   <body> <br /><br /><br />
     <center><h1>Welcome to <strong style="color: skyblue">IIS</strong></h1>
     <h4><strong style="color: skyblue">Incheon Infomation Science</strong> HighSchool Student Tools</h4></center>
+    <br /><br />
+    <center>
+        <button type="button" class="btn btn-danger" onclick="openWindowPop('https://hcs.eduro.go.kr/#/loginWithUserInfo', 'popup');">자가진단 참여</button>
+        <button type="button" class="btn btn-warning" onclick="openWindowPop('https://school.iamservice.net/organization/14166/group/2047212', 'popup');">학교 공지사항</button>
+        <button type="button" class="btn btn-info" onclick="openWindowPop('https://school.iamservice.net/organization/14166/group/2047213', 'popup');">학교 가정통신문</button>
+        <button type="button" class="btn btn-primary" onclick="openWindowPop('https://school.iamservice.net/organization/14166/group/2047215', 'popup');">오늘의 급식</button>
+
+        <br /><br />
+        <button style="width: 30%" type="button" class="btn btn-success" onclick="location.href='./index.html'">학과 (학반) 다시 선택하기</button> <br /><br /><br />
+        <button style="width: 15%" type="button" class="btn btn-dark" onclick="openWindowPop('https://inc2.ebsoc.co.kr/class', 'popup');">EBS 온라인 클래스 (바로가기)</button>
+        <button style="width: 15%" type="button" class="btn btn-dark" onclick="openWindowPop('https://inc2.ebsoc.co.kr/student/course', 'popup');">온클 학습(바로가기)</button><br /><br />
+        <button style="width: 15%" type="button" class="btn btn-dark" onclick="openWindowPop('https://inc2.ebsoc.co.kr/student/learning', 'popup');">온클 수강 이력 (바로가기)</button>
+        <button style="width: 15%" type="button" class="btn btn-dark" onclick="openWindowPop('https://inc2.ebsoc.co.kr/message/receive', 'popup');">온클 쪽지 (바로가기)</button>
+        <br /><br />
+        <strong>▲ 해당 기능은 EBS 온라인 클래스에 로그인을 해야 사용이 가능합니다! ▲</strong>
+    </center>
 
     <center>
         <br /><br />
-        <table style="width:50%">
-            <caption><strong id="class">OOO</strong>의 2021년도 1학기의 시간표 입니다.</caption>
-
-            <tr>
-                <th> </th>
-                <th>월</th>
-                <th>화</th>
-                <th>수</th>
-                <th>목</th>
-                <th>금</th>
-            </tr>
-                <tr>
-                <th>1교시</th>
-                <td id="t11">월요일 1교시</td>
-                <td id="t21">화요일 1교시</td>
-                <td id="t31">수요일 1교시</td>
-                <td id="t41">목요일 1교시</td>
-                <td id="t51">금요일 1교시</td>
-            </tr>
-                <tr>
-                <th>2교시</th>
-                <td id="t12">월요일 2교시</td>
-                <td id="t22">화요일 2교시</td>
-                <td id="t32">수요일 2교시</td>
-                <td id="t42">목요일 2교시</td>
-                <td id="t52">금요일 2교시</td>
-            </tr>
-                <tr>
-                <th>3교시</th>
-                <td id="t13">월요일 3교시</td>
-                <td id="t23">화요일 3교시</td>
-                <td id="t33">수요일 3교시</td>
-                <td id="t43">목요일 3교시</td>
-                <td id="t53">금요일 3교시</td>
-            </tr>
-            <tr>
-                <th>4교시</th>
-                <td id="t14">월요일 4교시</td>
-                <td id="t24">화요일 4교시</td>
-                <td id="t34">수요일 4교시</td>
-                <td id="t44">목요일 4교시</td>
-                <td id="t54">금요일 4교시</td>
-            </tr>
-            <tr>
-                <th>5교시</th>
-                <td id="t15">월요일 5교시</td>
-                <td id="t25">화요일 5교시</td>
-                <td id="t35">수요일 5교시</td>
-                <td id="t45">목요일 5교시</td>
-                <td id="t55">금요일 5교시</td>
-            </tr>
-            <tr>
-                <th>6교시</th>
-                <td id="t16">월요일 6교시</td>
-                <td id="t26">화요일 6교시</td>
-                <td id="t36">수요일 6교시</td>
-                <td id="t46">목요일 6교시</td>
-                <td id="t56">금요일 6교시</td>
-            </tr>
-            <tr>
-                <th>7교시</th>
-                <td id="t17">월요일 7교시</td>
-                <td id="t27">화요일 7교시</td>
-                <td> </td>
-                <td id="t47">목요일 7교시</td>
-                <td> </td>
-            </tr>
-        </table>
+        <strong id="class">OOO</strong>의 2021년도 1학기의 시간표 입니다.<br /><br />
+        <img src="./public/timeTables/a" id="timeTable" class="img-fluid" alt="...">
     </center>
 
     <br /><br />
@@ -165,8 +115,14 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="./public/js/timeTable.js"></script>
+
     <script>
+        function openWindowPop(url, name){
+            var options = 'top=10, left=10, width=1000, height=800, status=no, menubar=no, toolbar=no, resizable=no';
+            window.open(url, name, options);
+        }
+
         var getParameters = function (paramName) {
             var returnValue;
 
@@ -185,81 +141,82 @@
 
         var department = getParameters('department');
 
+        $("#timeTable").attr("src", `./public/timeTables/${department}.JPG`);
+
         if(department) {
-            if(department == "1;1")
+            if(department == "1;1") {
                 $("#class").text("1학년 1반 (IT 소프트웨어과)");
-            if(department == "1;2")
+            } else if(department == "1;2") {
                 $("#class").text("1학년 2반 (IT 소프트웨어과)");
-            if(department == "1;3")
+            } else if(department == "1;3") {
                 $("#class").text("1학년 3반 (IT 소프트웨어과)");
-            if(department == "1;4")
+            } else if(department == "1;4") {
                 $("#class").text("1학년 4반 (IT 통신과)");
-            if(department == "1;5")
+            } else if(department == "1;5") {
                 $("#class").text("1학년 5반 (IT 통신과)");
-            if(department == "1;6")
+            } else if(department == "1;6") {
                 $("#class").text("1학년 6반 (IT 통신과, 군특)");
-            if(department == "1;7")
+            } else if(department == "1;7") {
                 $("#class").text("1학년 7반 (IT 전자과)");
-            if(department == "1;8")
+            } else if(department == "1;8") {
                 $("#class").text("1학년 8반 (IT 전자과)");
-            if(department == "1;9")
+            } else if(department == "1;9") {
                 $("#class").text("1학년 9반 (IT 전자과)");
-            if(department == "1;10")
+            } else if(department == "1;10") {
                 $("#class").text("1학년 10반 (IT 응용과)");
-            if(department == "1;11")
+            } else if(department == "1;11") {
                 $("#class").text("1학년 11반 (IT 응용과)");
-            if(department == "1;12")
+            } else if(department == "1;12") {
                 $("#class").text("1학년 12반 (IT 응용과)");
-
-            if(department == "2;1")
+            } else if(department == "2;1") {
                 $("#class").text("2학년 1반 (IT 소프트웨어과)");
-            if(department == "2;2")
+            } else if(department == "2;2") {
                 $("#class").text("2학년 2반 (IT 소프트웨어과)");
-            if(department == "2;3")
+            } else if(department == "2;3") {
                 $("#class").text("2학년 3반 (IT 소프트웨어과)");
-            if(department == "2;4")
+            } else if(department == "2;4") {
                 $("#class").text("2학년 4반 (IT 통신과)");
-            if(department == "2;5")
+            } else if(department == "2;5") {
                 $("#class").text("2학년 5반 (IT 통신과)");
-            if(department == "2;6")
+            } else if(department == "2;6") {
                 $("#class").text("2학년 6반 (IT 통신과, 군특)");
-            if(department == "2;7")
+            } else if(department == "2;7") {
                 $("#class").text("2학년 7반 (IT 전자과)");
-            if(department == "2;8")
+            } else if(department == "2;8") {
                 $("#class").text("2학년 8반 (IT 전자과)");
-            if(department == "2;9")
+            } else if(department == "2;9") {
                 $("#class").text("2학년 9반 (IT 전자과)");
-            if(department == "2;10")
+            } else if(department == "2;10") {
                 $("#class").text("2학년 10반 (IT 응용과)");
-            if(department == "2;11")
+            } else if(department == "2;11") {
                 $("#class").text("2학년 11반 (IT 응용과)");
-            if(department == "2;12")
+            } else if(department == "2;12") {
                 $("#class").text("2학년 12반 (IT 응용과)");
-
-            if(department == "3;1")
+            } else if(department == "3;1") {
                 $("#class").text("3학년 1반 (IT 소프트웨어과)");
-            if(department == "3;2")
+            } else if(department == "3;2") {
                 $("#class").text("3학년 2반 (IT 소프트웨어과)");
-            if(department == "3;3")
+            } else if(department == "3;3") {
                 $("#class").text("3학년 3반 (IT 소프트웨어과)");
-            if(department == "3;4")
+            } else if(department == "3;4") {
                 $("#class").text("3학년 4반 (IT 통신과)");
-            if(department == "3;5")
+            } else if(department == "3;5") {
                 $("#class").text("3학년 5반 (IT 통신과)");
-            if(department == "3;6")
+            } else if(department == "3;6") {
                 $("#class").text("3학년 6반 (IT 통신과, 군특)");
-            if(department == "3;7")
+            } else if(department == "3;7") {
                 $("#class").text("3학년 7반 (IT 전자과)");
-            if(department == "3;8")
+            } else if(department == "3;8") {
                 $("#class").text("3학년 8반 (IT 전자과)");
-            if(department == "3;9")
+            } else if(department == "3;9") {
                 $("#class").text("3학년 9반 (IT 전자과)");
-            if(department == "3;10")
+            } else if(department == "3;10") {
                 $("#class").text("3학년 10반 (IT 응용과)");
-            if(department == "3;11")
+            } else if(department == "3;11") {
                 $("#class").text("3학년 11반 (IT 응용과)");
-            if(department == "3;12")
+            } else if(department == "3;12") {
                 $("#class").text("3학년 12반 (IT 응용과)");
+            }
         }
     </script>
   </body>
